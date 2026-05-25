@@ -285,9 +285,21 @@ function Contact() {
         </div>
 
         <form
-          onSubmit={(e) => {
+          action="https://formspree.io/f/mgoqnzvq"
+          method="POST"
+          onSubmit={async (e) => {
             e.preventDefault();
-            setSent(true);
+            const form = e.currentTarget;
+            const data = new FormData(form);
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: data,
+              headers: { Accept: "application/json" },
+            });
+            if (res.ok) {
+              setSent(true);
+              form.reset();
+            }
           }}
           className="md:col-span-6 space-y-6"
         >
@@ -311,6 +323,7 @@ function Contact() {
                   </label>
                   <input
                     id={f.id}
+                    name={f.id}
                     type={f.type}
                     required
                     className="w-full bg-transparent border-b border-primary-foreground/40 focus:border-primary-foreground py-2 outline-none text-lg placeholder:text-primary-foreground/40"
@@ -323,6 +336,7 @@ function Contact() {
                 </label>
                 <textarea
                   id="brief"
+                  name="brief"
                   required
                   rows={4}
                   className="w-full bg-transparent border-b border-primary-foreground/40 focus:border-primary-foreground py-2 outline-none text-lg resize-none placeholder:text-primary-foreground/40"
