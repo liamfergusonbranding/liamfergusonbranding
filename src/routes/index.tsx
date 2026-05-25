@@ -125,7 +125,7 @@ function About() {
           </div>
         </div>
         <div className="md:col-span-8">
-          <p className="font-display text-3xl md:text-5xl leading-[1.05]">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             I'm Liam — Toronto-based, and I build sites and brands for the
             small businesses around me. I use the latest AI tools to move
             fast, but the craft and the calls are still mine. No jargon, no
