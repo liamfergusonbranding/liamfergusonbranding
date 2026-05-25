@@ -285,9 +285,21 @@ function Contact() {
         </div>
 
         <form
-          onSubmit={(e) => {
+          action="https://formspree.io/f/mgoqnzvq"
+          method="POST"
+          onSubmit={async (e) => {
             e.preventDefault();
-            setSent(true);
+            const form = e.currentTarget;
+            const data = new FormData(form);
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: data,
+              headers: { Accept: "application/json" },
+            });
+            if (res.ok) {
+              setSent(true);
+              form.reset();
+            }
           }}
           className="md:col-span-6 space-y-6"
         >
