@@ -336,6 +336,7 @@ function Contact() {
                 </label>
                 <textarea
                   id="brief"
+                  name="brief"
                   required
                   rows={4}
                   className="w-full bg-transparent border-b border-primary-foreground/40 focus:border-primary-foreground py-2 outline-none text-lg resize-none placeholder:text-primary-foreground/40"
