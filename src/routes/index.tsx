@@ -34,7 +34,7 @@ function Nav() {
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2 group">
-          <span className="h-2 w-2 rounded-full bg-primary" />
+          <span aria-hidden className="font-display text-sm tracking-[0.2em]">■●▲</span>
           <span className="font-display text-xl">Liam Ferguson</span>
           <span className="eyebrow hidden sm:inline ml-1">Branding</span>
         </a>
