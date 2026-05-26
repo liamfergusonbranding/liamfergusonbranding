@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
@@ -41,30 +41,30 @@
 :root {
   --radius: 0.25rem;
 
-  /* Muted paper & ink editorial palette with soft clay accent */
-  --paper: oklch(0.965 0.006 80);
-  --ink: oklch(0.26 0.012 60);
-  --rule: oklch(0.86 0.008 70);
+  /* Minimal mono palette inspired by reference site */
+  --paper: oklch(1 0 0);
+  --ink: oklch(0.18 0 0);
+  --rule: oklch(0.92 0 0);
 
   --background: var(--paper);
   --foreground: var(--ink);
-  --card: oklch(0.98 0.004 80);
+  --card: oklch(1 0 0);
   --card-foreground: var(--ink);
   --popover: var(--paper);
   --popover-foreground: var(--ink);
-  --primary: oklch(0.55 0.08 35); /* muted clay */
-  --primary-foreground: oklch(0.97 0.005 85);
-  --secondary: oklch(0.92 0.008 75);
+  --primary: oklch(0.18 0 0); /* black as primary */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0 0);
   --secondary-foreground: var(--ink);
-  --muted: oklch(0.94 0.006 75);
-  --muted-foreground: oklch(0.52 0.012 70);
-  --accent: oklch(0.55 0.08 35);
-  --accent-foreground: oklch(0.97 0.005 85);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.65 0 0); /* soft gray for secondary text */
+  --accent: oklch(0.72 0 0);
+  --accent-foreground: var(--ink);
   --destructive: oklch(0.5 0.12 27);
   --destructive-foreground: oklch(0.98 0 0);
   --border: var(--rule);
-  --input: oklch(0.88 0.008 75);
-  --ring: oklch(0.55 0.08 35);
+  --input: oklch(0.9 0 0);
+  --ring: oklch(0.5 0 0);
 }
 
 @layer base {
@@ -89,15 +89,15 @@
 
 @utility font-display {
   font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 @utility headline {
   font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: -0.035em;
-  line-height: 0.92;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
 }
 
 @utility eyebrow {
