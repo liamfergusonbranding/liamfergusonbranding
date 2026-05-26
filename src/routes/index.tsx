@@ -307,7 +307,7 @@ function Contact() {
             <div className="border border-primary-foreground/30 p-10 rounded-md">
               <p className="font-display text-3xl">Got it. Talk soon.</p>
               <p className="mt-3 text-primary-foreground/80 text-sm">
-                I'll reply from liam@liamferguson.co within one business day.
+                I'll reply from liamfergusonbranding@gmail.com within one business day.
               </p>
             </div>
           ) : (
