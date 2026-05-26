@@ -278,7 +278,7 @@ function Contact() {
             Let's build something <span className="italic">worth showing off.</span>
           </h2>
           <div className="mt-12 space-y-2 font-mono text-sm">
-            <p>liam@liamferguson.co</p>
+            <p>liamfergusonbranding@gmail.com</p>
             <p>Toronto, ON</p>
             <p>Replies within one business day.</p>
           </div>
@@ -307,7 +307,7 @@ function Contact() {
             <div className="border border-primary-foreground/30 p-10 rounded-md">
               <p className="font-display text-3xl">Got it. Talk soon.</p>
               <p className="mt-3 text-primary-foreground/80 text-sm">
-                I'll reply from liam@liamferguson.co within one business day.
+                I'll reply from liamfergusonbranding@gmail.com within one business day.
               </p>
             </div>
           ) : (
