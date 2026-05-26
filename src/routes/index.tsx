@@ -278,7 +278,7 @@ function Contact() {
             Let's build something <span className="italic">worth showing off.</span>
           </h2>
           <div className="mt-12 space-y-2 font-mono text-sm">
-            <p>liam@liamferguson.co</p>
+            <p>liamfergusonbranding@gmail.com</p>
             <p>Toronto, ON</p>
             <p>Replies within one business day.</p>
           </div>
