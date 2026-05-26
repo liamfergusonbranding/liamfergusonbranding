@@ -29,110 +29,65 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-function Nav() {
-  return (
-    <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 group">
-          <span aria-hidden className="font-display text-sm tracking-[0.2em]">■●▲</span>
-          <span className="font-display text-xl">Liam Ferguson</span>
-          <span className="eyebrow hidden sm:inline ml-1">Branding</span>
-        </a>
-        <nav className="hidden md:flex items-center gap-8 text-sm">
-          <a href="#work" className="hover:text-primary transition">Approach</a>
-          <a href="#services" className="hover:text-primary transition">Services</a>
-          <a href="#pricing" className="hover:text-primary transition">Pricing</a>
-          <a href="#contact" className="hover:text-primary transition">Contact</a>
-        </nav>
-        <a
-          href="#contact"
-          className="text-sm px-4 py-2 rounded-full bg-foreground text-background hover:bg-primary transition"
-        >
-          Start a project
-        </a>
-      </div>
-    </header>
-  );
-}
+const Mark = ({ className = "" }: { className?: string }) => (
+  <span
+    aria-hidden
+    className={`font-display tracking-[0.2em] select-none ${className}`}
+  >
+    ■●▲
+  </span>
+);
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-24 md:pt-32 md:pb-40">
-        <div className="flex items-center gap-3 mb-10">
-          <span className="eyebrow">Toronto · Est. now</span>
-          <span className="h-px flex-1 bg-rule" />
-          <span className="eyebrow">001 / Independent studio</span>
-        </div>
-
-        <h1 className="headline text-[clamp(3rem,10vw,9rem)]">
-          Your business is good.
-          <br />
-          <span className="italic text-primary">Your website isn't.</span>
-        </h1>
-
-        <div className="mt-12 grid md:grid-cols-12 gap-8 items-end">
-          <p className="md:col-span-6 text-lg md:text-xl text-muted-foreground max-w-xl">
-            I build websites and brand identities for local businesses across
-            the GTA. Clean, fast, and finished in under a week.
-          </p>
-          <div className="md:col-span-6 flex flex-wrap gap-3 md:justify-end">
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition"
-            >
-              Book a free call
-            </a>
-            <a
-              href="#services"
-              className="px-6 py-3 rounded-full border border-foreground text-sm font-medium hover:bg-foreground hover:text-background transition"
-            >
-              See what I do
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Marquee */}
-      <div className="rule-top border-b border-border py-5 overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap font-display text-3xl md:text-4xl gap-12">
-          {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-12 pr-12">
-              <span>Restaurants</span><span className="text-primary">✦</span>
-              <span>Salons</span><span className="text-primary">✦</span>
-              <span>Contractors</span><span className="text-primary">✦</span>
-              <span>Realtors</span><span className="text-primary">✦</span>
-              <span>Cafés</span><span className="text-primary">✦</span>
-              <span>Studios</span><span className="text-primary">✦</span>
-              <span>Trades</span><span className="text-primary">✦</span>
-            </div>
-          ))}
-        </div>
-      </div>
+    <section className="min-h-[92vh] flex flex-col items-center justify-center text-center px-6">
+      <Mark className="text-sm mb-16" />
+      <h1 className="font-display font-extrabold text-4xl md:text-6xl tracking-tight leading-[1.05]">
+        Proud business?
+        <br />
+        <span className="text-muted-foreground">Website dragging you down?</span>
+      </h1>
+      <a
+        href="#contact"
+        className="mt-14 inline-flex items-center px-6 py-2.5 rounded-full bg-secondary text-foreground text-sm hover:bg-foreground hover:text-background transition-colors"
+      >
+        Get a quote
+      </a>
     </section>
   );
 }
 
 function About() {
   return (
-    <section id="work" className="border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-24 md:py-32 grid md:grid-cols-12 gap-10">
-        <div className="md:col-span-4">
-          <p className="eyebrow">About</p>
-          <div className="mt-6 flex items-center gap-3">
-            <span className="h-12 w-12 rounded-full bg-primary/15 border border-primary/30 grid place-items-center font-display text-xl text-primary">L</span>
-            <div className="font-display text-2xl">Liam Ferguson</div>
-          </div>
-        </div>
-        <div className="md:col-span-8">
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            I'm Liam — Toronto-based, and I build sites and brands for the
-            small businesses around me. I use the latest AI tools to move
-            fast, but the craft and the calls are still mine. No jargon, no
-            agency runaround, no surprise invoices — just the work, done
-            properly, in a week.
+    <section className="px-6 py-32 md:py-48">
+      <div className="max-w-xl mx-auto md:mx-0 md:ml-[16%]">
+        <Mark className="text-sm" />
+        <div className="mt-16">
+          <h2 className="font-display font-bold text-xl">Liam Ferguson</h2>
+          <p className="font-display font-bold text-xl text-muted-foreground">
+            Designer
           </p>
         </div>
+        <div className="mt-10 space-y-6 text-[15px] leading-relaxed text-muted-foreground max-w-md">
+          <p>
+            I'm Liam, based in Toronto. I help local businesses upgrade their
+            websites and brands fast, no technical jargon. Small business owners
+            hire me because I use the latest AI tools to deliver quality —
+            quickly.
+          </p>
+          <p>
+            No mystery or hoops. I love working with restaurants, salons,
+            contractors, or anyone in the GTA who wants to look legit online.
+            I'll handle it all and keep things simple.
+          </p>
+          <p>
+            Ready to stop putting it off? I'll build you something you'll
+            finally feel good about.
+          </p>
+        </div>
+        <p className="mt-12 font-display italic text-2xl text-foreground/80">
+          Liam
+        </p>
       </div>
     </section>
   );
@@ -140,94 +95,57 @@ function About() {
 
 const services = [
   {
-    n: "01",
-    title: "Website Design",
-    body:
-      "Custom websites built and delivered in 3–5 days. Clean, mobile-friendly, and designed to convert visitors into customers.",
+    title: "Website design.",
+    body: "Custom websites built fast. Mobile-ready. Designed to win customers.",
   },
   {
-    n: "02",
-    title: "Brand Identity",
-    body:
-      "Logo direction, colour palette, typography, and a simple brand guide so your business looks consistent everywhere.",
+    title: "Brand identity.",
+    body: "Logo, colors, fonts, and guides for a sharp, consistent look.",
   },
   {
-    n: "03",
-    title: "Google Business Profile",
-    body:
-      "Get found on Google Maps and local search. I set it up, optimize it, and manage it monthly so you don't have to think about it.",
-  },
-  {
-    n: "04",
-    title: "Monthly Retainer",
-    body:
-      "Ongoing updates, SEO improvements, and support. Your website stays fresh and you always have someone to call.",
+    title: "Google profile.",
+    body: "Setup and optimize your business for search. Monthly management available.",
   },
 ];
 
 function Services() {
   return (
-    <section id="services" className="border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-24 md:py-32">
-        <div className="flex items-end justify-between flex-wrap gap-4 mb-16">
-          <h2 className="headline text-5xl md:text-7xl max-w-2xl">
-            Four things.<br />
-            <span className="italic text-primary">Done well.</span>
-          </h2>
-          <p className="eyebrow">Services / 2026</p>
-        </div>
-        <div className="grid md:grid-cols-2 border-t border-border">
-          {services.map((s, i) => (
-            <div
-              key={s.n}
-              className={`group p-8 md:p-12 border-b border-border ${
-                i % 2 === 0 ? "md:border-r" : ""
-              } hover:bg-foreground hover:text-background transition-colors duration-300`}
-            >
-              <div className="flex items-start justify-between mb-8">
-                <span className="font-mono text-xs">{s.n}</span>
-                <span className="h-2 w-2 rounded-full bg-primary group-hover:bg-background transition" />
-              </div>
-              <h3 className="font-display text-3xl md:text-4xl mb-4">{s.title}</h3>
-              <p className="text-base text-muted-foreground group-hover:text-background/80 max-w-md">
-                {s.body}
-              </p>
-            </div>
-          ))}
-        </div>
+    <section className="px-6 py-32 md:py-40">
+      <div className="max-w-xl mx-auto md:mx-0 md:ml-[16%] space-y-16">
+        {services.map((s) => (
+          <div key={s.title}>
+            <h3 className="font-display font-bold text-2xl md:text-3xl">
+              {s.title}
+            </h3>
+            <p className="mt-3 text-[15px] text-muted-foreground max-w-md leading-relaxed">
+              {s.body}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
 
 const reasons = [
-  { k: "Fast delivery", v: "Most websites done in under a week." },
-  { k: "Transparent pricing", v: "No surprise invoices, no hidden fees." },
-  { k: "Local & accessible", v: "Based in Toronto. No corporate runaround." },
-  { k: "No long-term contracts", v: "Pay month to month. Cancel anytime." },
+  "Fast delivery",
+  "Transparent pricing",
+  "Local & accessible",
+  "No contracts",
 ];
 
 function Why() {
   return (
-    <section className="border-b border-border bg-foreground text-background">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-24 md:py-32 grid md:grid-cols-12 gap-12">
-        <div className="md:col-span-5">
-          <p className="eyebrow text-background/60">Why me</p>
-          <h2 className="headline text-5xl md:text-7xl mt-6">
-            Hire the person, not the <span className="italic text-primary">agency</span>.
-          </h2>
-        </div>
-        <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-background/15">
-          {reasons.map((r) => (
-            <div key={r.k} className="bg-foreground p-8">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                <h3 className="font-display text-2xl">{r.k}</h3>
-              </div>
-              <p className="text-background/70">{r.v}</p>
-            </div>
-          ))}
-        </div>
+    <section className="px-6 py-32 md:py-40">
+      <div className="max-w-xl mx-auto md:mx-0 md:ml-[16%] space-y-6">
+        {reasons.map((r) => (
+          <h3
+            key={r}
+            className="font-display font-bold text-2xl md:text-3xl"
+          >
+            {r}
+          </h3>
+        ))}
       </div>
     </section>
   );
@@ -235,33 +153,53 @@ function Why() {
 
 function Pricing() {
   const items = [
-    { label: "Websites", price: "from $500" },
-    { label: "Brand Identity", price: "from $300" },
-    { label: "Retainers", price: "from $150/mo" },
+    {
+      label: "Websites",
+      price: "$500+",
+      bullets: ["Mobile friendly", "Delivered fast", "Done for you"],
+      cta: "Start project",
+    },
+    {
+      label: "Brand Identity",
+      price: "$300+",
+      bullets: ["Logo direction", "Brand guide", "Consistent style"],
+      cta: "Get details",
+    },
   ];
   return (
-    <section id="pricing" className="border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-24 md:py-32">
-        <p className="eyebrow mb-10">Pricing</p>
-        <div className="divide-y divide-border border-y border-border">
+    <section id="pricing" className="px-6 py-32 md:py-48">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="font-display font-extrabold text-4xl md:text-5xl tracking-tight">
+          Pricing
+        </h2>
+        <p className="mt-4 font-display font-medium text-xl text-muted-foreground">
+          Simple, upfront, local.
+        </p>
+
+        <div className="mt-16 grid md:grid-cols-2 gap-6">
           {items.map((i) => (
             <div
               key={i.label}
-              className="flex items-baseline justify-between py-8 group"
+              className="border border-border rounded-2xl p-10 text-left flex flex-col"
             >
-              <span className="font-display text-4xl md:text-6xl group-hover:text-primary transition">
-                {i.label}
-              </span>
-              <span className="font-mono text-sm md:text-base">{i.price}</span>
+              <h3 className="font-display font-bold text-2xl">{i.label}</h3>
+              <p className="mt-2 font-display font-extrabold text-4xl">
+                {i.price}
+              </p>
+              <ul className="mt-8 space-y-3 text-[15px] text-muted-foreground">
+                {i.bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+              <a
+                href="#contact"
+                className="mt-10 inline-flex self-start items-center px-5 py-2 rounded-full bg-secondary text-foreground text-sm hover:bg-foreground hover:text-background transition-colors"
+              >
+                {i.cta}
+              </a>
             </div>
           ))}
         </div>
-        <p className="mt-10 text-lg text-muted-foreground">
-          Not sure what you need?{" "}
-          <a href="#contact" className="text-foreground underline underline-offset-4 decoration-primary decoration-2 hover:text-primary">
-            Let's talk — first call is free.
-          </a>
-        </p>
       </div>
     </section>
   );
@@ -270,19 +208,14 @@ function Pricing() {
 function Contact() {
   const [sent, setSent] = useState(false);
   return (
-    <section id="contact" className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-24 md:py-32 grid md:grid-cols-12 gap-12">
-        <div className="md:col-span-6">
-          <p className="eyebrow text-primary-foreground/70">Contact</p>
-          <h2 className="headline text-5xl md:text-8xl mt-6">
-            Let's build something <span className="italic">worth showing off.</span>
-          </h2>
-          <div className="mt-12 space-y-2 font-mono text-sm">
-            <p>liamfergusonbranding@gmail.com</p>
-            <p>Toronto, ON</p>
-            <p>Replies within one business day.</p>
-          </div>
-        </div>
+    <section id="contact" className="px-6 py-32 md:py-48">
+      <div className="max-w-xl mx-auto text-center">
+        <h2 className="font-display font-extrabold text-3xl md:text-5xl tracking-tight leading-[1.1]">
+          Ready to look as good as your business actually is?
+        </h2>
+        <p className="mt-6 font-display font-medium text-xl text-muted-foreground">
+          Let's talk — first call is free.
+        </p>
 
         <form
           action="https://formspree.io/f/mgoqnzvq"
@@ -301,53 +234,50 @@ function Contact() {
               form.reset();
             }
           }}
-          className="md:col-span-6 space-y-6"
+          className="mt-14 space-y-5 text-left"
         >
           {sent ? (
-            <div className="border border-primary-foreground/30 p-10 rounded-md">
-              <p className="font-display text-3xl">Got it. Talk soon.</p>
-              <p className="mt-3 text-primary-foreground/80 text-sm">
-                I'll reply from liamfergusonbranding@gmail.com within one business day.
+            <div className="border border-border rounded-2xl p-10 text-center">
+              <p className="font-display font-bold text-2xl">
+                Got it. Talk soon.
+              </p>
+              <p className="mt-3 text-muted-foreground text-sm">
+                I'll reply from liamfergusonbranding@gmail.com within one
+                business day.
               </p>
             </div>
           ) : (
             <>
               {[
                 { id: "name", label: "Name", type: "text" },
-                { id: "business", label: "Business name", type: "text" },
                 { id: "email", label: "Email", type: "email" },
               ].map((f) => (
-                <div key={f.id}>
-                  <label htmlFor={f.id} className="eyebrow text-primary-foreground/70 block mb-2">
-                    {f.label}
-                  </label>
-                  <input
-                    id={f.id}
-                    name={f.id}
-                    type={f.type}
-                    required
-                    className="w-full bg-transparent border-b border-primary-foreground/40 focus:border-primary-foreground py-2 outline-none text-lg placeholder:text-primary-foreground/40"
-                  />
-                </div>
-              ))}
-              <div>
-                <label htmlFor="brief" className="eyebrow text-primary-foreground/70 block mb-2">
-                  What do you need?
-                </label>
-                <textarea
-                  id="brief"
-                  name="brief"
+                <input
+                  key={f.id}
+                  id={f.id}
+                  name={f.id}
+                  type={f.type}
                   required
-                  rows={4}
-                  className="w-full bg-transparent border-b border-primary-foreground/40 focus:border-primary-foreground py-2 outline-none text-lg resize-none placeholder:text-primary-foreground/40"
+                  placeholder={f.label}
+                  className="w-full bg-secondary rounded-full px-5 py-3 text-sm outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground"
                 />
+              ))}
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                placeholder="Message"
+                className="w-full bg-secondary rounded-2xl px-5 py-3 text-sm outline-none focus:ring-1 focus:ring-foreground resize-none placeholder:text-muted-foreground"
+              />
+              <div className="text-center pt-2">
+                <button
+                  type="submit"
+                  className="inline-flex items-center px-6 py-2.5 rounded-full bg-foreground text-background text-sm hover:opacity-90 transition"
+                >
+                  Submit
+                </button>
               </div>
-              <button
-                type="submit"
-                className="mt-4 inline-flex items-center gap-3 bg-background text-foreground px-6 py-3 rounded-full text-sm font-medium hover:bg-foreground hover:text-background transition"
-              >
-                Send it <span aria-hidden>→</span>
-              </button>
             </>
           )}
         </form>
@@ -358,11 +288,9 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
-        <p>© {new Date().getFullYear()} Liam Ferguson Branding — Toronto, ON</p>
-        <p className="font-mono text-xs">Built by a person. In Toronto.</p>
-      </div>
+    <footer className="px-6 py-16 text-center text-sm text-muted-foreground">
+      <p>© {new Date().getFullYear()}</p>
+      <p className="mt-1">All Rights Reserved</p>
     </footer>
   );
 }
@@ -370,7 +298,6 @@ function Footer() {
 function Index() {
   return (
     <main className="bg-background text-foreground">
-      <Nav />
       <Hero />
       <About />
       <Services />
