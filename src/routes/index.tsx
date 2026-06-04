@@ -241,8 +241,7 @@ function Contact() {
                 Got it. Talk soon.
               </p>
               <p className="mt-3 text-muted-foreground text-sm">
-                I'll reply from liamfergusonbranding@gmail.com within one
-                business day.
+                I'll reply from liam@liamfbranding.ca within one business day.
               </p>
             </div>
           ) : (
