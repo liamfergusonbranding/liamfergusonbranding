@@ -159,9 +159,13 @@ function Pricing() {
       cta: "Start project",
     },
     {
-      label: "Brand Identity",
-      price: "$300+",
-      bullets: ["Logo direction", "Brand guide", "Consistent style"],
+      label: "Website Maintenance",
+      price: "$200+/month",
+      bullets: [
+        "Unlimited content updates",
+        "Hosting and domain management",
+        "Monthly performance checks",
+      ],
       cta: "Get details",
     },
   ];
