@@ -217,21 +217,21 @@ function Contact() {
         </p>
 
         <form
-          action="https://formspree.io/f/mgoqnzvq"
-          method="POST"
-          onSubmit={async (e) => {
+          onSubmit={(e) => {
             e.preventDefault();
             const form = e.currentTarget;
             const data = new FormData(form);
-            const res = await fetch(form.action, {
-              method: "POST",
-              body: data,
-              headers: { Accept: "application/json" },
-            });
-            if (res.ok) {
-              setSent(true);
-              form.reset();
-            }
+            const name = String(data.get("name") ?? "");
+            const email = String(data.get("email") ?? "");
+            const message = String(data.get("message") ?? "");
+            const subject = encodeURIComponent("New quote request from " + name);
+            const body = encodeURIComponent(
+              "Name: " + name + "\nEmail: " + email + "\n\n" + message
+            );
+            window.location.href =
+              "mailto:liam@liamfbranding.ca?subject=" + subject + "&body=" + body;
+            setSent(true);
+            form.reset();
           }}
           className="mt-14 space-y-5 text-left"
         >
