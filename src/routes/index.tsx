@@ -72,7 +72,7 @@ function About() {
           <p>
             I'm Liam, based in Toronto. I help local businesses upgrade their
             websites and brands fast, no technical jargon. Small business owners
-            hire me because I use the latest AI tools to deliver quality —
+            hire me because I use my experience along with the latest AI tools to deliver quality —
             quickly.
           </p>
           <p>
