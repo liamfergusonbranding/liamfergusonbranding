@@ -221,7 +221,7 @@ function Contact() {
         </p>
 
         <form
-          action="https://formspree.io/f/mgoqnzvq"
+          action="https://formspree.io/f/xbdelgko"
           method="POST"
           onSubmit={async (e) => {
             e.preventDefault();
