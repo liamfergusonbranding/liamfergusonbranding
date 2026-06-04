@@ -131,7 +131,6 @@ const reasons = [
   "Fast delivery",
   "Transparent pricing",
   "Local & accessible",
-  "No contracts",
 ];
 
 function Why() {
