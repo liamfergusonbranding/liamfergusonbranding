@@ -91,7 +91,10 @@ function About() {
             finally feel good about.
           </p>
         </div>
-        <p className="mt-12 font-display italic text-2xl text-foreground/80">
+        <p
+          className="mt-12 text-4xl text-foreground/80"
+          style={{ fontFamily: "var(--font-signature)" }}
+        >
           Liam
         </p>
       </div>
