@@ -65,7 +65,7 @@ function About() {
         <img
           src={liamPhoto.url}
           alt="Liam Ferguson"
-          className="w-20 h-20 rounded-full object-cover mb-6"
+          className="w-24 h-24 rounded-full object-cover mb-6"
         />
         <Mark className="text-sm" />
         <div className="mt-16">
