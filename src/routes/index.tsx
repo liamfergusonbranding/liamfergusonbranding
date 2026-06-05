@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import liamPhoto from "@/assets/liam.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -61,6 +62,11 @@ function About() {
   return (
     <section className="px-6 py-32 md:py-48">
       <div className="max-w-xl mx-auto md:mx-0 md:ml-[16%]">
+        <img
+          src={liamPhoto.url}
+          alt="Liam Ferguson"
+          className="w-20 h-20 rounded-full object-cover mb-6"
+        />
         <Mark className="text-sm" />
         <div className="mt-16">
           <h2 className="font-display font-bold text-xl">Liam Ferguson</h2>
