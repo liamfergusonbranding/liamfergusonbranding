@@ -169,7 +169,7 @@ function Pricing() {
     },
     {
       label: "Website Maintenance",
-      price: "$200+/month",
+      price: "$100+/month",
       bullets: [
         "Unlimited content updates",
         "Hosting and domain management",
