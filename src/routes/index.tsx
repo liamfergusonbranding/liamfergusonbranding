@@ -6,20 +6,22 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Liam Ferguson Branding — Websites & Brand Identity, Toronto" },
+      { title: "Liam Ferguson — Websites & Branding for Toronto Small Businesses" },
       {
         name: "description",
         content:
-          "Custom websites and brand identity for Toronto small businesses. Delivered in under a week. Transparent pricing, no contracts.",
+          "Affordable custom websites for local Toronto businesses. Fast delivery, transparent pricing, based in Scarborough.",
       },
-      { property: "og:title", content: "Liam Ferguson Branding — Toronto" },
+      { property: "og:title", content: "Liam Ferguson — Websites & Branding for Toronto Small Businesses" },
       {
         property: "og:description",
         content:
-          "Websites and branding for local Toronto businesses. Fast, clean, no fluff.",
+          "Affordable custom websites for local Toronto businesses. Fast delivery, transparent pricing, based in Scarborough.",
       },
+      { property: "og:url", content: "https://liamfbranding.ca/" },
     ],
     links: [
+      { rel: "canonical", href: "https://liamfbranding.ca/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
