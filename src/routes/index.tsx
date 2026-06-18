@@ -121,8 +121,9 @@ const services = [
 
 function Services() {
   return (
-    <section className="px-6 py-32 md:py-40">
+    <section className="px-6 py-32 md:py-40" aria-labelledby="services-heading">
       <div className="max-w-xl mx-auto md:mx-0 md:ml-[16%] space-y-16">
+        <h2 id="services-heading" className="sr-only">Services</h2>
         {services.map((s) => (
           <div key={s.title}>
             <h3 className="font-display font-bold text-2xl md:text-3xl">
