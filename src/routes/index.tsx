@@ -147,8 +147,9 @@ const reasons = [
 
 function Why() {
   return (
-    <section className="px-6 py-32 md:py-40">
+    <section className="px-6 py-32 md:py-40" aria-labelledby="why-heading">
       <div className="max-w-xl mx-auto md:mx-0 md:ml-[16%] space-y-6">
+        <h2 id="why-heading" className="sr-only">Why work with me</h2>
         {reasons.map((r) => (
           <h3
             key={r}
